@@ -22,18 +22,19 @@ createApp({
         for (let i = 0; i < 10 ; i++){
             generaMailList ().then( email =>{
                 mailList.push(email);
+
                 if(email.length === 10){
-                    let list = document.createElement ('ul');
+                    let list = document.getElementById ('list');
                     mailList.forEach(email => {
                         let item = document.createElement('li');
                         item.textContent = email;
                         mailList.appendChild(item);
                         
                     });
-                    document.body.appendChild(mailList)
+                    list.appendChild(item);
                 }
                 
-            })
+            });
         }
     }
   
