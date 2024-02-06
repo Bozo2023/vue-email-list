@@ -9,19 +9,14 @@
 <body>
     <div id="app">
         <h1> Lista degli email</h1>
-        <ul>
-            <li>{{ mailList }}</li>
-            <li>{{ mailList }}</li>
-            <li>{{ mailList }}</li>
-            <li>{{ mailList }}</li>
-            <li>{{ mailList }}</li>
-            <li>{{ mailList }}</li>
-            <li>{{ mailList }}</li>
-            <li>{{ mailList }}</li>
-            <li>{{ mailList }}</li>
-            <li>{{ mailList }}</li>
-        </ul>
-mailList
+        <ol>
+            <li
+             v-for="(element,index) in mailList"
+             :key="index">
+            <span>{{ element }}</span>
+        </li>
+
+        </ol>
 
 
 
