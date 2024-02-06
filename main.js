@@ -4,7 +4,7 @@ const { createApp }=Vue
 createApp({
   data(){
       return{
-        mailList : 0
+        mailList : []
        
       } 
   },
@@ -19,6 +19,13 @@ createApp({
             this.mailList=result.data.response
 
         })
+        for (let i = 0; i < 10 ; i++){
+            generaMailList ().then( email =>{
+                mailList.push(email);
+                if(email.length === 10)
+                let list = document.createElement ('ul')
+            })
+        }
     }
   
       
